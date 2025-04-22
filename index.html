@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon_ico_32x32.ico" sizes="any"/>
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="mobile-icon" href="./images/mobile-icon.png" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -11,8 +14,41 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <h1 class="header__title">&lt;/html&gt;</h1>
+      <p class="header__text">закрывающий тег</p>
+    </header>
+    <main>
+      <ul class="articles__list">
+        <li class="article">
+          <h2 class="article__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+          <div class="ab">
+            <img 
+              src="./images/ice-cream_truck.jpg"
+              alt="Фургон с мороженным"
+              class="article__image"
+              loading="lazy"
+            />
+            <label class="card__image-label">&lt;/html&gt;</label>
+          </div>
+          <div class="content">
+            <div class="article__text">
+              <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+              <p>Место для ваших воспоминаний о начале обучения.</p>
+          </div>
+            <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none"><path fill="#000" d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"/></svg><span class="button__text">Like</span></button>
+          </div>
+        </li>
+      </ul>
+    </main>
     <script src="./scripts/like.js"></script>
+    <footer>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+          <use href="./svg/icons.svg#floppy"></use>
+        </svg>
+      </div>
+    </footer>
   </body>
 </html>
+</HTML>
