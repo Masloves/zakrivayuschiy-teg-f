@@ -4,4 +4,7 @@
     --accent-font-family: PressStart2P;
     --bg-color: #fff;
     --main-border: 2px solid #000;
+    --main-text-weight: 400;
+    --accent-text-weight: 700;
+    --main-gap: 50px;
 }
