@@ -28,6 +28,11 @@ li {
   padding: 0;
 }
 
+dialog {
+  padding: 0;
+  max-inline-size: 341px;
+}
+
 a {
   color: inherit;
 }
