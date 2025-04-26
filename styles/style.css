@@ -347,17 +347,8 @@
 }
 
 .dialog-button {
-  position: relative;
-  font-family: var(--accent-font-family, sans-serif);
-  font-size: 14px;
-  line-height: 90%;
   text-transform: uppercase;
   padding: 11px 0px;
-  border: 2px solid var(--accent-color, #000);
-  overflow: hidden;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-  background-color: #fff;
 }
 
 dialog::backdrop {
