@@ -11,7 +11,6 @@
     --header-title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --header-text-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --bg-color: #fff;
-    --main-border: 2px solid #000;
     --main-font-weight: 400;
     --accent-font-weight: 700;
     --main-gap: 50px;
