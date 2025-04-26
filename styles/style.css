@@ -21,19 +21,19 @@
   inline-size: var(--page-inline-size);
 }
 
-
 .header {
   display: grid;
   gap: 20px;
   padding: 120px 14px;
-  margin: 100px 0px;
-  font-family: var(--accent-font-family);
+  margin-block-start: 100px;
+  font-family: var(--accent-font-family, sans-serif);
   align-items: center;
   justify-items: center;
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
   text-transform: uppercase;
 }
+
 .header__title {
   font-size: var(--header-title-size);
 }
@@ -47,6 +47,8 @@
   flex-direction: column;
   align-items: center;
   gap: var(--main-gap, 50px);
+  margin-block-start: 100px;
+  margin-block-end: 100px;
 }
 
 .card {
@@ -57,7 +59,7 @@
 .card__title {
   padding: 4px 10px 6px;
   font-size: 18px;
-  font-weight: var(--accent-font-weight, 700);
+  font-variation-settings: 'wght' var(--accent-font-weight);
 }
 
 .card__image-container {
@@ -70,35 +72,36 @@
 .card__image {
   display: block;
   inline-size: 100%;
-  object-fit: cover;
+  block-size: 100%;
+  object-fit: contain;
   object-position: center;
 }
 
-.second-card {
+.filter-grayscale-contrast-brightness {
   filter: grayscale(0.7) contrast(90%) brightness(110%);
 }
 
-.third-card {
+.filter-saturate {
   filter: saturate(200%);
 }
 
-.fourth-card {
+.filter-hue-rotate-sepia {
   filter: hue-rotate(390deg) sepia(10%);
 }
 
-.fifth-card {
+.filter-sepia {
   filter: sepia(200%);
 }
 
-.sixth-card {
+.filter-invert {
   filter: invert(0.8);
 }
 
-.seventh-card {
+.filter-blur {
   filter: blur(10px);
 }
 
-.eighth-card {
+.filter-contrast-saturate-blur {
   filter: contrast(90%) saturate(90%) blur(0.6px);
 }
 
@@ -137,6 +140,7 @@
   gap: 27px;
   font-size: 18px;
   line-height: 21px;
+  font-variation-settings: 'wght' var(--main-font-weight);
 }
 
 .card__buttons {
@@ -248,10 +252,9 @@
   outline: none;
 }
 
-.card__like-button {
+.button {
   position: relative;
-  font-family: var(--accent-font-family);
-  font-variation-settings: 'wght' 400;
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 90%;
   background-color: var(--bg-color, #fff);
@@ -265,35 +268,24 @@
   transition: box-shadow 0.3s ease;
 }
 
+.card__like-button {
+  padding-inline: 0;
+  padding-block: 11px;
+}
+
 .button__text {
   mix-blend-mode: difference;
   color: #fff;
   z-index: 1;
 }
 
-.footer {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  padding: 50px 0px 100px;
-}
-
 .save__button {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex-shrink: 0;
-  font-family: var(--accent-font-family);
-  font-variation-settings: 'wght' 400;
-  font-size: 14px;
-  background-color: var(--bg-color, #fff);
   align-items: center;
+  flex-shrink: 0;
   padding: 13px 18px;
-  border: 2px solid var(--accent-color, #000);
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-  overflow: hidden;
 }
 
 .save__button-image {
@@ -304,21 +296,15 @@
   fill: #fff;
 }
 
-.card__like-button:focus,
-.save__button:focus,
-.dialog-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible,
-.save__button:focus-visible,
-.dialog-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0;
 }
 
-.card__like-button::before,
-.save__button::before,
-.dialog-button::before {
+.button::before {
   content: '';
   width: 100%;
   height: 100%;
@@ -330,9 +316,7 @@
   transform: translate(-100%);
 }
 
-.card__like-button:hover::before,
-.save__button:hover::before,
-.dialog-button:hover::before {
+.button:hover::before {
   transform: translate(0);
 }
 
@@ -356,8 +340,7 @@
 }
 
 .dialog-text {
-  font-family: var(--accent-font-family);
-  font-variation-settings: 'wght' 400;
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   text-transform: uppercase;
   line-height: 21px;
@@ -365,8 +348,7 @@
 
 .dialog-button {
   position: relative;
-  font-family: var(--accent-font-family);
-  font-variation-settings: 'wght' 400;
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 90%;
   text-transform: uppercase;
