@@ -17,7 +17,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family, sans-serif);
   inline-size: var(--page-inline-size);
 }
 
@@ -30,8 +30,8 @@
   font-family: var(--accent-font-family);
   align-items: center;
   justify-items: center;
-  background-color: var(--bg-color);
-  border: var(--main-border);
+  background-color: var(--bg-color, #fff);
+  border: var(--main-border, 50px);
   text-transform: uppercase;
 }
 .header__title {
@@ -46,18 +46,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--main-gap);
+  gap: var(--main-gap, 50px);
 }
 
 .card {
   border: var(--main-border);
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
 }
 
 .card__title {
   padding: 4px 10px 6px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--accent-font-weight, 700);
 }
 
 .card__image-container {
@@ -87,11 +87,11 @@
 }
 
 .fifth-card {
-  filter: invert(0.8);
+  filter: sepia(200%);
 }
 
 .sixth-card {
-  filter: sepia(200%);
+  filter: invert(0.8);
 }
 
 .seventh-card {
@@ -99,21 +99,17 @@
 }
 
 .eighth-card {
-  filter: contrast(20%) saturate(400%) hue-rotate(70deg) blur(1px) grayscale(0.4);
+  filter: contrast(90%) saturate(90%) blur(0.6px);
 }
 
 .card__image-label {
   position: absolute;
   opacity: 0.5;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family, sans-serif);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 100%;
-  text-shadow: 
-    1px 1px 0 var(--bg-color),
-    -1px 1px 0 var(--bg-color),
-    1px -1px 0 var(--bg-color),
-    -1px -1px 0 var(--bg-color);
+  text-shadow: var(--label-shadow);
   inset-block-start: 25px;
   inset-inline-end: 13px;
   mix-blend-mode: hard-light;
@@ -121,8 +117,8 @@
 
 @supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
   .card__image-label {
-    -webkit-text-stroke: 1px var(--bg-color);
-    text-stroke: 1px var(--bg-color);
+    -webkit-text-stroke: 1px var(--bg-color, #fff);
+    text-stroke: 1px var(--bg-color, #fff);
     text-shadow: none;
   }
 }
@@ -162,7 +158,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: #000;
+  border-color: var(--animation-main-color, #000);
 }
 
 .core {
@@ -171,12 +167,12 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--animation-color, #000);
+  fill: var(--animation-main-color, #000);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .core {
-  fill: var(--animation-main-color, #ff0000);
+  fill: var(--animation-accent-color, #ff0000);
   transition: fill 0.3s linear;
 }
 
@@ -191,12 +187,12 @@
 }
 
 .like-icon:hover .main-body {
-  fill: var(--animation-color, #000);
+  fill: var(--animation-main-color, #000);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--animation-main-color, #ff0000);
+  fill: var(--animation-accent-color, #ff0000);
   transition: fill 0.3s linear;
 }
 
@@ -206,12 +202,12 @@
 }
 
 .contour {
-  fill: var(--accent-color);
+  fill: var(--contour-color, #000);
   transition: fill linear 0.1s;
 }
 
 .like-icon.is-liked .contour {
-  fill: #ff0000;
+  fill: var(--animation-accent-color, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
@@ -255,11 +251,11 @@
 .card__like-button {
   position: relative;
   font-family: var(--accent-font-family);
-  font-weight: 400;
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 90%;
   border: none;
-  background-color: #fff;
+  background-color: var(--bg-color, #fff);
   padding-inline: 0;
   padding-block: 11px;
   text-align: center;
@@ -280,7 +276,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  padding: 50px 34.5px 100px;
+  padding: 50px 0px 100px;
 }
 
 .save__button{
@@ -290,9 +286,9 @@
   gap: 8px;
   flex-shrink: 0;
   font-family: var(--accent-font-family);
-  font-weight: 400;
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
-  background-color: #fff;
+  background-color: var(--bg-color, #fff);
   align-items: center;
   padding: 13px 18px;
   border: none;
@@ -361,7 +357,7 @@
 
 .dialog-text {
   font-family: var(--accent-font-family);
-  font-weight: 400;
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   text-transform: uppercase;
   line-height: 21px;
@@ -370,7 +366,7 @@
 .dialog-button {
   position: relative;
   font-family: var(--accent-font-family);
-  font-weight: 400;
+  font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 90%;
   text-transform: uppercase;

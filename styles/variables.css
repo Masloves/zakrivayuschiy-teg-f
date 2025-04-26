@@ -6,17 +6,22 @@
         repeating-linear-gradient(#d3d3d3, transparent 2px), 
         linear-gradient(#e7e7e7 0.01%, #1a1a1a);
     --main-gap: 50px;
-    --main-font-family: Inter-Variable, sans-serif;
+    --main-font-family: Inter-Variable;
     --accent-font-family: PressStart2P;
     --header-title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --header-text-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --bg-color: #fff;
     --main-border: 2px solid #000;
-    --main-text-weight: 400;
-    --accent-text-weight: 700;
+    --main-font-weight: 400;
+    --accent-font-weight: 700;
     --main-gap: 50px;
     --contour-color: #000;
-    --animation-color: #000;
-    --animation-fill-color: #ff0000;
+    --animation-main-color: #000;
+    --animation-accent-color: #ff0000;
     --accent-color: #000;
+    --label-shadow: 
+      1px 1px 0 var(--bg-color),
+      -1px 1px 0 var(--bg-color),
+      1px -1px 0 var(--bg-color),
+      -1px -1px 0 var(--bg-color);
 }
