@@ -301,6 +301,7 @@
   inline-size: 28px;
   block-size: 28px;
   z-index: 1;
+  fill: #fff;
 }
 
 .card__like-button:focus,
@@ -355,6 +356,7 @@ button {
   mix-blend-mode: difference;
   inline-size: 39px;
   flex-shrink: 0;
+  fill: #fff;
 }
 
 .dialog-text {
