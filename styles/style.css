@@ -370,10 +370,6 @@ dialog::backdrop {
     padding: 128px 120px;
   }
 
-  /* .card__image-container {
-    inline-size: 700px;
-  } */
-
   .card__image-label {
     inset-inline-end: 25px;
   }
